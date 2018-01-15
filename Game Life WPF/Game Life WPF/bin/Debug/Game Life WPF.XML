@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Game Life WPF</name>
+    </assembly>
+    <members>
+        <member name="T:Game_Life_WPF.App">
+            <summary>
+            Логика взаимодействия для App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Game_Life_WPF.CheckingLife">
+            <summary>
+            A class that will test whether there are more moves or not
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.CheckingLife.checkOldLife">
+            <summary>
+            array of source position
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.CheckingLife.checkNewLife">
+            <summary>
+            array of next move positions
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.CheckingLife.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.CheckingLife.Presence_On_Life(System.Windows.Shapes.Rectangle[0:,0:])">
+             <summary>
+            compares if the original life is the same as the position of the next move then the game is over
+             </summary>
+             <param name="m">source array</param>
+             <returns></returns>
+        </member>
+        <member name="M:Game_Life_WPF.CheckingLife.Get_Live_Count">
+            <summary>
+            return the number of living cells.
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.CheckingLife.Get_array_life(System.Windows.Shapes.Rectangle[0:,0:])">
+            <summary>
+            Returns an array of type bool for comparison
+            </summary>
+            <param name="m">source array</param>
+            <returns></returns>
+        </member>
+        <member name="T:Game_Life_WPF.Filling">
+            <summary>
+            The class that fills the field
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.Filling.ArrayForFill">
+            <summary>
+            array for filling
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.Filling.rand">
+            <summary>
+            Random
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.Filling.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.Filling.Fill_Array(System.Int32,System.Int32,System.Windows.Shapes.Rectangle)">
+            <summary>
+            Randomly fill an array
+            </summary>
+            <param name="i">position i</param>
+            <param name="j">position j</param>
+            <param name="r">square</param>
+            <returns></returns>
+        </member>
+        <member name="M:Game_Life_WPF.Filling.Fill_Form(System.Int32,System.Int32,System.Windows.Shapes.Rectangle)">
+            <summary>
+            Paint specific squares depending on whether he is alive or dead
+            </summary>
+            <param name="i">position i</param>
+            <param name="j">position j</param>
+            <param name="r">square</param>
+            <returns></returns>
+        </member>
+        <member name="M:Game_Life_WPF.Filling.Rand">
+            <summary>
+            random filling
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Game_Life_WPF.Life">
+            <summary>
+            The class that makes the game itself
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.Life.margins_life">
+            <summary>
+            array for new cell positions
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.Life.arrayStep">
+            <summary>
+            array in which the cell neighbors are stored
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.Life.x">
+            <summary>
+            Constants for width and height
+            </summary>
+        </member>
+        <member name="P:Game_Life_WPF.Life.Get_margins_life">
+            <summary>
+            property returning an array of new cells
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.Life.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.Life.Surface(System.Windows.Shapes.Rectangle[0:,0:],System.Boolean)">
+            <summary>
+            checks the field, to emulate the surface of the torus
+            </summary>
+            <param name="m"></param>
+            <param name="ch"></param>
+        </member>
+        <member name="M:Game_Life_WPF.Life.Count_Neighbors(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Counts the number of neighbors
+            </summary>
+            <param name="i">the position of the cell in width</param>
+            <param name="j">cell height position</param>
+            <param name="iTop">the position of the cell from above</param>
+            <param name="iBelow">bottom position of the cell</param>
+            <param name="jLeft">the position of the cell on the left according to the widthе</param>
+            <param name="jRight">the position of the cell from the right to the width</param>
+            <returns></returns>
+        </member>
+        <member name="M:Game_Life_WPF.Life.Make_Step">
+            <summary>
+            draws the following stroke
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.Life.Ckeck_Step">
+            <summary>
+            calculates the next move for comparison to life
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Game_Life_WPF.MainWindow">
+            <summary>
+            Логика взаимодействия для MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.MainWindow.x">
+            <summary>
+            Constant for the width
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.MainWindow.y">
+            <summary>
+            Constant for the height
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.MainWindow.margins">
+            <summary>
+            Two-dimensional array of rectangles for drawing a field
+            </summary>
+        </member>
+        <member name="F:Game_Life_WPF.MainWindow.timer">
+            <summary>
+            Timer
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.MainWindow.#ctor">
+            <summary>
+            The window initialization constructor
+            </summary>
+        </member>
+        <member name="M:Game_Life_WPF.MainWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            When the window is loaded, creates a field for the game and randomly fills it up.
+            </summary>
+            <param name="sender">объект</param>
+            <param name="e">собитие</param>
+        </member>
+        <member name="M:Game_Life_WPF.MainWindow.R_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Event when you click on the mouse in the field of the playing field
+            </summary>
+            <param name="sender">объект</param>
+            <param name="e">собитие</param>
+        </member>
+        <member name="M:Game_Life_WPF.MainWindow.btnStart_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            When you click on the Start button, the timer starts and the game starts
+            </summary>
+            <param name="sender">объект</param>
+            <param name="e">собитие</param>
+        </member>
+        <member name="M:Game_Life_WPF.MainWindow.btnRestart_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            When you click the Restart button, the game starts anew
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Game_Life_WPF.MainWindow.Timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            By the timer, the next move is executed, if there are no more moves, the timer stops
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Game_Life_WPF.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game_Life_WPF.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:Game_Life_WPF.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:Game_Life_WPF.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>
